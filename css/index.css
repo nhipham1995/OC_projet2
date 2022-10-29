@@ -171,7 +171,6 @@ form .form-part button.submit-button {
 .filter h2 {
 	height: 100%;
 	font-weight: 510;
-	align-items: stretch;
 	margin-right: 8px;
 	min-width: 70px;
 	font-size: 0.9rem;
@@ -179,7 +178,11 @@ form .form-part button.submit-button {
     transform: translateY(15px);
 
 }
-
+.list-filter{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+}
 .filter-item {
 	display: flex;
 	align-items: stretch;
@@ -217,7 +220,7 @@ form .form-part button.submit-button {
 	border-bottom-right-radius: 20px;
 	border-left: none;
 	line-height: 280%;
-	transition: border 0.2s ease-in-o 3ms;
+	transition: border 0.2s ease-in 3ms;
 }
 .filter-item p:hover {
 	border:1px solid rgb(112, 111, 111);
@@ -342,11 +345,7 @@ p.more-location {
 	color: black;
 	font-weight: 600;
 }
-/* @media screen and (max-width: 30em) {
-	p.more-location {
-		margin-top: 20px;
-	}
-} */
+
 /* Popularity card */
 .popularity h2.title-card-section {
 	margin-bottom: 0;
@@ -360,7 +359,7 @@ p.more-location {
 	width: 96%;
 	margin-bottom: 25px;
 	flex: 1;
-	height: 150px;
+	min-height: 150px;
 }
 .card-body.popular-card-body {
 	flex: 1;
@@ -383,16 +382,7 @@ p.more-location {
 .activity {
 	min-height: 600px;
 }
-/* @media screen and (max-width: 86.5rem) {
-	.activity {
-		padding-top: 50px;
-	}
-}
-@media screen and (max-width: 39rem) {
-	.activity {
-		padding-top: 0;
-	}
-} */
+
 
 .activity-card-zone {
 	display: flex;
@@ -424,6 +414,7 @@ p.more-location {
 	height: inherit;
 	flex-grow: 1;
 	min-height: 0;
+	padding: 0;
 }
 .activity-card-zone.card-zone article.card figure.card-img{
 	height: calc(100% - 20px);
@@ -585,6 +576,9 @@ footer ul li {
 	.accommodation,
 	.popularity {
 		padding: 35px 5px 15px 5px;
+	}
+	.list-filter{
+		gap: 12px
 	}
 }
 @media screen and (max-width: 720px) {
